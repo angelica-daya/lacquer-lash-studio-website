@@ -40,25 +40,25 @@ const nails = [
   ["Nail Art add-on", "from $10", "+15 min"],
   ["Classic Pedicure", "$45", "45 min"],
   ["Gel Pedicure", "$60", "60 min"],
-];
+] as const;
 
 const lashSets = [
   ["Classic Full Set", "$140", "2 hrs", "One extension per lash. Your mascara, but better."],
   ["Hybrid Full Set", "$165", "2 hrs", "A mix of classic and volume. Fuller but still soft."],
   ["Volume Full Set", "$190", "2.5 hrs", "Fluffy fans for a full, glam look."],
-];
+] as const;
 const lashExtras = [
   ["Lash Fill (within 3 weeks)", "from $65", "60–75 min"],
   ["Lash Lift & Tint", "$85", "60 min"],
   ["Lash Removal", "$25", "30 min"],
-];
+] as const;
 
 const team = [
   ["Dani", "Owner & Lash Artist", "bg-lavender-soft"],
   ["Priya", "Lash & Brow Artist", "bg-lavender-soft"],
   ["Kim", "Nail Tech & Nail Art Specialist", "bg-blush"],
   ["Rosa", "Nail Tech, Gel-X & Acrylics", "bg-blush"],
-];
+] as const;
 
 const policies = [
   ["Deposits", "Lash full sets need a $25 deposit, which comes off your total. We text you a secure payment link after booking."],
@@ -66,14 +66,14 @@ const policies = [
   ["Running late", "We have a 10-minute grace period. After that your service may need to be shortened or rescheduled."],
   ["Walk-ins", "We're appointment only, but ask Coco about same-day openings."],
   ["Prep", "Come with clean lashes and no mascara. If you have gel or acrylic from another salon, let us know so we can allow time for removal."],
-];
+] as const;
 
 const hours = [
   ["Tue–Fri", "10am–7pm"],
   ["Sat", "9am–5pm"],
   ["Sun", "11am–4pm"],
   ["Mon", "Closed"],
-];
+] as const;
 
 function Logo({ light = false }: { light?: boolean }) {
   return (
