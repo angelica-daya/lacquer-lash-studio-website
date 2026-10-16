@@ -51,6 +51,16 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-blush: var(--blush);
+  --color-cream: var(--cream);
+  --color-rose: var(--rose);
+  --color-mauve: var(--mauve);
+  --color-lavender: var(--lavender);
+  --color-lavender-soft: var(--lavender-soft);
+  --color-gold: var(--gold);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --shadow-soft: 0 10px 30px -12px oklch(0.36 0.06 340 / 0.25);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -62,26 +72,33 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --blush: #F6E3E7;
+  --cream: #FFF9F5;
+  --rose: #D46A8C;
+  --mauve: #5B3A4F;
+  --lavender: #B39DDB;
+  --lavender-soft: #EEE7F8;
+  --gold: #C9A66B;
+  --radius: 1rem;
+  --background: var(--cream);
+  --foreground: oklch(0.33 0.05 340);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: var(--mauve);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: var(--rose);
+  --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --muted: var(--blush);
+  --muted-foreground: oklch(0.48 0.04 340);
+  --accent: var(--blush);
+  --accent-foreground: var(--mauve);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
+  --border: oklch(0.9 0.03 350);
   --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --ring: var(--rose);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -142,3 +159,12 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-sans); }
+  h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--color-mauve); }
+  section[id] { scroll-margin-top: 5rem; }
+}
+@utility gold-rule { height: 1px; width: 4rem; background: var(--color-gold); }
+@utility card-soft { background: var(--color-card); border-radius: 1.25rem; box-shadow: var(--shadow-soft); }
