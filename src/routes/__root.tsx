@@ -113,7 +113,8 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
-        {/* GHL CHAT WIDGET: paste embed code here */}
+        {/* GHL CHAT WIDGET */}
+        <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6ad1f8154e3a6a8f9572cb28"></script>
       </body>
     </html>
   );
