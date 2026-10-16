@@ -6,10 +6,16 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Optional sub-path for hosting, e.g. BASE_PATH=/lacquer-lash serves the site at
+// demo.angelicadfernandez.com/lacquer-lash. Unset (Lovable preview, local dev) = site root.
+const basePath = (process.env.BASE_PATH ?? "").replace(/^\/+|\/+$/g, "");
+const base = basePath ? `/${basePath}/` : "/";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: { base },
 });
